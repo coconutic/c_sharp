@@ -1,0 +1,312 @@
+﻿<Window x:Class="WpfApplication3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="{DynamicResource txt_title}" Height="585" Width="1043.3" Background = "#0cb3dd"
+    Icon= "{StaticResource ResourceKey=icon1}" >
+
+    <!-- помещаем стиль в ресурсы окна -->
+    <Window.Resources>
+        <!-- этот ресурс нужен для изменения цвета выбранного элемента -->
+
+
+        <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}"
+                   Color="Black" />
+        <Style x:Key="normal" TargetType="ListBoxItem">
+            <Setter Property="Background" Value="#4cc2c5" />
+            <Setter Property="Margin" Value="3" />
+            <Setter Property="Padding" Value="3" />
+            <Style.Triggers>
+                <Trigger Property="IsSelected" Value="True">
+                    <Setter Property="FontSize" Value="14" />
+                    <Setter Property="FontWeight" Value="Bold" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="TextStyle">
+            <Setter Property="TextBlock.FontFamily" Value="Century Gothic" />
+            <Setter Property="TextBlock.FontSize" Value="15" />
+            <Setter Property="TextBlock.FontWeight" Value="Medium" />
+
+            <Setter Property="TextBlock.Foreground" Value="Black" />
+        </Style>
+    </Window.Resources>
+    <StackPanel Orientation="Horizontal"   Margin="0,0,2,2">
+        <StackPanel.Resources>
+            <Style x:Key="buttonStyle">
+                <Setter Property="Button.FontSize" Value="12" />
+                <Setter Property="Button.Background" Value="Transparent" />
+                <Setter Property="Button.BorderBrush" Value="Wheat" />
+                <Setter Property="Button.Foreground" Value="White" />
+                <Setter Property="Button.Width" Value="80" />
+                <Setter Property="Button.FontFamily" Value="Comic Sans MS" />
+
+            </Style>
+            <Style x:Key="TextStyle">
+                <Setter Property="TextBlock.FontFamily" Value="Century Gothic" />
+                <Setter Property="TextBlock.FontSize" Value="15" />
+                <Setter Property="TextBlock.FontWeight" Value="Medium" />
+
+                <Setter Property="TextBlock.Foreground" Value="Black" />
+            </Style>
+
+        </StackPanel.Resources>
+        <ListBox x:Name="lst" DisplayMemberPath="Name"  Width="459" IsSynchronizedWithCurrentItem="true" 
+    		ItemContainerStyle="{StaticResource normal}" Margin="0,262,0,31" 
+                 ItemsSource="{Binding Students}">
+            <ListBox.GroupStyle>
+                <GroupStyle>
+                    <GroupStyle.HeaderTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Name}" FontSize="14"
+            					FontWeight="Bold" Padding="3"
+            					Foreground="Black" Background="#4cc58c"/>
+                        </DataTemplate>
+                    </GroupStyle.HeaderTemplate>
+                </GroupStyle>
+                <GroupStyle>
+                    <GroupStyle.HeaderTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Name}" FontSize="14"
+            					FontWeight="Bold" Padding="3" 
+            					Foreground="Black" Background="#739fd1"/>
+                        </DataTemplate>
+                    </GroupStyle.HeaderTemplate>
+                </GroupStyle>
+            </ListBox.GroupStyle>
+        </ListBox>
+        <Grid Margin="5" Width="255"
+        	DataContext="{Binding SelectedItem, ElementName=lst}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="20" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="11" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="54" />
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="27*"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="72"/>
+                <RowDefinition Height="97*"/>
+                <RowDefinition Height="221*"/>
+            </Grid.RowDefinitions>
+            <TextBlock Style="{StaticResource TextStyle}" Grid.Row="3" Grid.Column="0" Height="Auto" Text="{DynamicResource name_surname}" Margin="-455,31,455,1" >
+                <TextBlock.Effect>
+                    <DropShadowEffect ShadowDepth="5" Direction="300" Color="DarkGray" />
+                </TextBlock.Effect>
+            </TextBlock>
+            <TextBlock Style="{StaticResource TextStyle}" Grid.Row="7" Grid.Column="0" Text="{DynamicResource txt_age}" Margin="-455,8,455,58" RenderTransformOrigin="0.494,0.864" Grid.RowSpan="2" >
+                <TextBlock.Effect>
+                    <DropShadowEffect ShadowDepth="5" Direction="300" Color="DarkGray" />
+                </TextBlock.Effect>
+            </TextBlock>
+            <TextBox Grid.Row="3" x:Name ="fio"
+        		Text="{Binding Name, Mode=TwoWay, ValidatesOnDataErrors=True}" Margin="-279,31,148,8" Grid.RowSpan="2" />
+            <TextBlock Style="{StaticResource TextStyle}" Grid.Row="6" Grid.Column="0" Text="{DynamicResource txt_avr_mark}" Margin="-455,7,455,48" Grid.RowSpan="2" >
+                <TextBlock.Effect>
+                    <DropShadowEffect ShadowDepth="5" Direction="300" Color="DarkGray" />
+                </TextBlock.Effect>
+            </TextBlock>
+            <TextBox Grid.Row="6" x:Name ="avr"
+                     
+        		Text="{Binding Mark, Mode=TwoWay, ValidatesOnDataErrors=True}" Height="26" VerticalAlignment="Top" Margin="-279,1,148,0" />
+            <TextBlock Style="{StaticResource TextStyle}" Grid.Row="7" Grid.Column="0" Text="{DynamicResource txt_group}" Margin="-455,0,455,56" Height="18" VerticalAlignment="Bottom" Grid.RowSpan="2" >
+                <TextBlock.Effect>
+                    <DropShadowEffect ShadowDepth="5" Direction="300" Color="DarkGray" />
+                </TextBlock.Effect>
+            </TextBlock>
+            <TextBox Grid.Row="7" x:Name ="num"
+        		Text="{Binding Group, Mode=TwoWay, ValidatesOnDataErrors=True}" Margin="-279,8,148,16"  />
+            <TextBox Grid.Row="8" x:Name ="ag"
+        		Text="{Binding Age, Mode=TwoWay, ValidatesOnDataErrors=True}" Margin="-279,1,148,45" />
+            <Button Style="{StaticResource buttonStyle}" Grid.Row="4" Content="{DynamicResource data1}" 
+        		Click="btn1_Click" Margin="58,1,47,0" Width="Auto" Grid.ColumnSpan="3"  VerticalAlignment="Top" Height="26" Grid.RowSpan="3">
+                <Button.Effect>
+                    <DropShadowEffect ShadowDepth="5" Direction="300" Color="DarkGray" />
+                </Button.Effect>
+            </Button>
+            <Button Style="{StaticResource buttonStyle}" Grid.Row="8" Content="{DynamicResource undo1}" 
+        		Click="btnReset_Click" Margin="-101,43,136,4" Width="115">
+                <Button.Effect>
+                    <DropShadowEffect ShadowDepth="5" Direction="300" Color="DarkGray" />
+                </Button.Effect>
+            </Button>
+            <Button Style="{StaticResource buttonStyle}" Grid.Row="3" Content="{DynamicResource group_by_age}" 
+        		Click="btnSort_Click_2" Margin="58,18,47,10" Width="150" Grid.ColumnSpan="3">
+                <Button.Effect>
+                    <DropShadowEffect ShadowDepth="5" Direction="300" Color="DarkGray" />
+                </Button.Effect>
+            </Button>
+            <Button Style="{StaticResource buttonStyle}" Grid.Row="7" Content="{DynamicResource rating}"
+        		Click="btnGroup1_Click" Margin="58,8,47,15" Width="150" Grid.ColumnSpan="3" >
+                <Button.Effect>
+                    <DropShadowEffect ShadowDepth="5" Direction="300" Color="DarkGray" />
+                </Button.Effect>
+            </Button>
+            <Button Style="{StaticResource buttonStyle}" Grid.Row="8" Content="{DynamicResource delete1}" ToolTip="{DynamicResource txt_3}" 
+        		Click="btnDelete_Click" Margin="-286,43,286,4" Width="150" >
+                <Button.Effect>
+                    <DropShadowEffect ShadowDepth="5" Direction="300" Color="DarkGray" />
+                </Button.Effect>
+            </Button>
+            <Button Style="{StaticResource buttonStyle}" Grid.Row="8" Content="{DynamicResource add1}"
+        		Click="btnAdd_Click" Margin="-422,43,422,4" Width="150"  >
+                <Button.Effect>
+                    <DropShadowEffect ShadowDepth="5" Direction="300" Color="DarkGray" />
+                </Button.Effect>
+            </Button>
+            <Button  Grid.Row="6" Content="{DynamicResource rating}" Background="Transparent" BorderBrush="White"  Foreground="Wheat"
+        		Margin="79,17,-144,34"  x:Name="try" Click="try_Click" Grid.RowSpan="2" Grid.Column="2">
+                <Button.Effect>
+                    <DropShadowEffect ShadowDepth="5" Direction="300" Color="DarkGray" />
+                </Button.Effect>
+            </Button>
+            <TextBox Grid.Row="3" x:Name ="goodstd"
+        		Margin="79,32,-249,8" Grid.Column="2" Grid.RowSpan="2" />
+            <TextBox Grid.Row="8" x:Name ="badstd"
+        		Margin="79,10,-249,50" Grid.Column="2" Grid.RowSpan="2"  />
+            <Button Style="{StaticResource buttonStyle}" Grid.Row="10" Content="{DynamicResource grop1}"
+        		Margin="46,118,59,75" Width="150" x:Name="to_group" Click="to_group_Click" Grid.ColumnSpan="3">
+                <Button.Effect>
+                    <DropShadowEffect ShadowDepth="5" Direction="300" Color="DarkGray" />
+                </Button.Effect>
+                <Button.Triggers>
+                    <EventTrigger RoutedEvent="Button.Click">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation
+                                    Storyboard.TargetName="to_group" 
+                                    Storyboard.TargetProperty="Width"
+                                    From="150" To="120" Duration="0:0:2" 
+                                    AutoReverse="True"  />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Button.Triggers>
+            </Button>
+            <TextBox Grid.Row="10" x:Name ="grooop"
+        		Margin="18,65,23,129" Grid.ColumnSpan="3" />
+            <Button Style="{StaticResource buttonStyle}" Grid.Row="9" Content="{DynamicResource go_away}"
+        		Margin="28,75,-93,22" Width="150" x:Name="del_avr" Click="del_avr_Click" Grid.Column="2" >
+                <Button.Effect>
+                    <DropShadowEffect ShadowDepth="5" Direction="300" Color="DarkGray" />
+                </Button.Effect>
+            </Button>
+            <TextBox Grid.Row="9" x:Name ="count_st"
+        		Margin="18,80,23,209" Grid.ColumnSpan="3" Grid.RowSpan="2" />
+            <TextBlock Style="{StaticResource TextStyle}" Grid.Row="3" Grid.Column="2" Text="{DynamicResource txt_leader}" Margin="79,0,-73,32" RenderTransformOrigin="0.494,0.864" >
+                <TextBlock.Effect>
+                    <DropShadowEffect ShadowDepth="5" Direction="300" Color="DarkGray" />
+                </TextBlock.Effect>
+            </TextBlock>
+            <TextBlock Style="{StaticResource TextStyle}" Grid.Row="7" Grid.Column="2" Text="{DynamicResource txt_blacklist}" Margin="79,34,-73,0" RenderTransformOrigin="0.507,1.625" >
+                <TextBlock.Effect>
+                    <DropShadowEffect ShadowDepth="5" Direction="300" Color="DarkGray" />
+                </TextBlock.Effect>
+            </TextBlock>
+            <TextBlock Style="{StaticResource TextStyle}" Grid.Row="10" Text="{DynamicResource txt_quan_group}" Margin="18,0,-51,161" Height="22" VerticalAlignment="Bottom" Grid.ColumnSpan="3" >
+                <TextBlock.Effect>
+                    <DropShadowEffect ShadowDepth="5" Direction="300" Color="DarkGray" />
+                </TextBlock.Effect>
+            </TextBlock>
+            <TextBlock Style="{StaticResource TextStyle}" Grid.Row="9" Margin="18,27,10,27" Grid.ColumnSpan="3" Text="{DynamicResource txt_deduct}">
+                <TextBlock.Effect>
+                    <DropShadowEffect ShadowDepth="5" Direction="300" Color="DarkGray" />
+                </TextBlock.Effect>
+            </TextBlock>
+            <Button Style="{StaticResource buttonStyle}" Grid.Row="8" Content="{DynamicResource serial}"
+        		Margin="58,0,47,45" Width="150" x:Name="serial_avr" Click="serial_avr_Click" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="3" >
+                <Button.Effect>
+                    <DropShadowEffect ShadowDepth="5" Direction="300" Color="DarkGray" />
+                </Button.Effect>
+            </Button>
+            <Button Style="{StaticResource buttonStyle}" Grid.Row="8" Content="{DynamicResource deserial}"
+        		Margin="58,0,47,4" Width="150" x:Name="deserial_avr" Click="deserial_avr_Click" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="3" Height="27" VerticalAlignment="Bottom" >
+                <Button.Effect>
+                    <DropShadowEffect ShadowDepth="5" Direction="300" Color="DarkGray" />
+                </Button.Effect>
+            </Button>
+            <Menu Margin="-455,1,148,43" Grid.Row="1" Grid.RowSpan="3" Background="Transparent" BorderBrush="White"  >
+                <Menu.Effect>
+                    <DropShadowEffect ShadowDepth="5" Direction="300" Color="#FF05975B"  />
+                </Menu.Effect>
+                <MenuItem  Header="{DynamicResource menu}" FontFamily="Comic Sans MS" FontStyle="Italic" ToolTip="{DynamicResource txt_1}" Background="Transparent" BorderBrush="White" >
+                    <MenuItem Header="{DynamicResource rating}"  Click="btnGroup1_Click" Background="#0cb3dd" BorderBrush="White" >
+                        <MenuItem.Icon>
+                            <Image Source="{StaticResource ResourceKey=icon2}"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="{DynamicResource data1}" Click="btn1_Click" Background="#0cb3dd" BorderBrush="White" >
+                        <MenuItem.Icon>
+                            <Image Source="{StaticResource ResourceKey=icon3}"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="{DynamicResource grop1}" Click="btnSort_Click_2" Background="#0cb3dd" BorderBrush="White">
+                        <MenuItem.Icon>
+                            <Image Source="{StaticResource ResourceKey=icon4}"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="{DynamicResource exit}" Click="MenuItem_Click"  Background="#0cb3dd" BorderBrush="White">
+                        <MenuItem.Icon>
+                            <Image Source="{StaticResource ResourceKey=icon5}"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </MenuItem>
+                <MenuItem Header="{DynamicResource file}" FontFamily="Comic Sans MS" FontStyle="Italic"  Background="Transparent" BorderBrush="White" Width="39" >
+                    <MenuItem Header="{DynamicResource save}"  Click="Save_file_Click" Background="#0cb3dd" BorderBrush="White"/>
+                    <MenuItem Header="{DynamicResource open}" Click="Open_file_Click" Background="#0cb3dd" BorderBrush="White"/>
+                    <MenuItem Header="{DynamicResource save_bin}"  Click="Save_binfile_Click" Background="#0cb3dd" BorderBrush="White"/>
+                    <MenuItem Header="{DynamicResource open_bin}"  Click="Open_binfile_Click" Background="#0cb3dd" BorderBrush="White"/>
+                    <MenuItem Header="{DynamicResource deflate_bin}"  Click="deflate_file_Click" Background="#0cb3dd" BorderBrush="White"/>
+                    <MenuItem Header="{DynamicResource undeflate_file}"  Click="undeflate_file_Click" Background="#0cb3dd" BorderBrush="White"/>
+                </MenuItem>
+                <MenuItem x:Name="lang" Header="{DynamicResource language}" FontFamily="Comic Sans MS" FontStyle="Italic" ToolTip="{DynamicResource txt_2_lan}" Background="Transparent" BorderBrush="White" >
+                    <MenuItem Header="{DynamicResource ru_lang}"  Click="Save_file_Click" Background="#0cb3dd" BorderBrush="White"/>
+                    <MenuItem Header="{DynamicResource en_lang}"  Click="Open_file_Click" Background="#0cb3dd" BorderBrush="White"/>
+                </MenuItem>
+            </Menu>
+        </Grid>
+    </StackPanel>
+    <Window.CommandBindings>
+        <CommandBinding Command="ApplicationCommands.New"
+                        Executed="Executed_New"
+                        CanExecute="CanExecute_New"/>
+    </Window.CommandBindings>
+    <Window.InputBindings>
+        <KeyBinding Command="ApplicationCommands.New"
+                    Gesture="Ctrl+D"/>
+    </Window.InputBindings>
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="Window.MouseDown">
+            <EventTrigger.Actions>
+                <BeginStoryboard>
+                    <Storyboard>
+                        <ColorAnimationUsingKeyFrames 
+              Storyboard.TargetProperty
+              ="(Window.Background).
+              (SolidColorBrush.Color)">
+                            <LinearColorKeyFrame 
+                KeyTime="0:0:2" 
+                Value="Blue"/>
+                            <LinearColorKeyFrame 
+                KeyTime="0:0:4" 
+                Value="Red"/>
+                            <LinearColorKeyFrame 
+                KeyTime="0:0:6" 
+                Value="Green"/>
+                            <LinearColorKeyFrame 
+                KeyTime="0:0:6" 
+                Value="#0cb3dd"/>
+                        </ColorAnimationUsingKeyFrames>
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger.Actions>
+        </EventTrigger>
+    </Window.Triggers>
+
+</Window>
+

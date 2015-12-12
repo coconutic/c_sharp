@@ -1,0 +1,32 @@
+C:\Users\Катька\Documents\Visual Studio 2013\Projects\WpfApplication3\WpfApplication3\bin\Debug\WpfApplication3.exe.config
+C:\Users\Катька\Documents\Visual Studio 2013\Projects\WpfApplication3\WpfApplication3\bin\Debug\WpfApplication3.exe
+C:\Users\Катька\Documents\Visual Studio 2013\Projects\WpfApplication3\WpfApplication3\bin\Debug\WpfApplication3.pdb
+C:\Users\Катька\Documents\Visual Studio 2013\Projects\WpfApplication3\WpfApplication3\obj\Debug\WpfApplication3.csprojResolveAssemblyReference.cache
+C:\Users\Катька\Documents\Visual Studio 2013\Projects\WpfApplication3\WpfApplication3\obj\Debug\MainWindow.baml
+C:\Users\Катька\Documents\Visual Studio 2013\Projects\WpfApplication3\WpfApplication3\obj\Debug\MainWindow.g.cs
+C:\Users\Катька\Documents\Visual Studio 2013\Projects\WpfApplication3\WpfApplication3\obj\Debug\App.g.cs
+C:\Users\Катька\Documents\Visual Studio 2013\Projects\WpfApplication3\WpfApplication3\obj\Debug\WpfApplication3_MarkupCompile.cache
+C:\Users\Катька\Documents\Visual Studio 2013\Projects\WpfApplication3\WpfApplication3\obj\Debug\WpfApplication3.g.resources
+C:\Users\Катька\Documents\Visual Studio 2013\Projects\WpfApplication3\WpfApplication3\obj\Debug\WpfApplication3.Properties.Resources.resources
+C:\Users\Катька\Documents\Visual Studio 2013\Projects\WpfApplication3\WpfApplication3\obj\Debug\WpfApplication3.csproj.GenerateResource.Cache
+C:\Users\Катька\Documents\Visual Studio 2013\Projects\WpfApplication3\WpfApplication3\obj\Debug\WpfApplication3.exe
+C:\Users\Катька\Documents\Visual Studio 2013\Projects\WpfApplication3\WpfApplication3\obj\Debug\WpfApplication3.pdb
+C:\Users\Katrin\Documents\c_sharp\lab_!\WpfApplication3\WpfApplication3\bin\Debug\WpfApplication3.exe.config
+C:\Users\Katrin\Documents\c_sharp\lab_!\WpfApplication3\WpfApplication3\obj\Debug\WpfApplication3.exe
+C:\Users\Katrin\Documents\c_sharp\lab_!\WpfApplication3\WpfApplication3\obj\Debug\WpfApplication3.pdb
+C:\Users\Katrin\Documents\c_sharp\lab_!\WpfApplication3\WpfApplication3\bin\Debug\WpfApplication3.exe
+C:\Users\Katrin\Documents\c_sharp\lab_!\WpfApplication3\WpfApplication3\bin\Debug\WpfApplication3.pdb
+C:\Users\Katrin\Documents\c_sharp\lab_!\WpfApplication3\WpfApplication3\obj\Debug\WpfApplication3.csprojResolveAssemblyReference.cache
+C:\Users\Katrin\Documents\c_sharp\lab_!\WpfApplication3\WpfApplication3\obj\Debug\MainWindow.baml
+C:\Users\Katrin\Documents\c_sharp\lab_!\WpfApplication3\WpfApplication3\obj\Debug\MainWindow.g.cs
+C:\Users\Katrin\Documents\c_sharp\lab_!\WpfApplication3\WpfApplication3\obj\Debug\App.g.cs
+C:\Users\Katrin\Documents\c_sharp\lab_!\WpfApplication3\WpfApplication3\obj\Debug\WpfApplication3_MarkupCompile.cache
+C:\Users\Katrin\Documents\c_sharp\lab_!\WpfApplication3\WpfApplication3\obj\Debug\WpfApplication3.g.resources
+C:\Users\Katrin\Documents\c_sharp\lab_!\WpfApplication3\WpfApplication3\obj\Debug\WpfApplication3.Properties.Resources.resources
+C:\Users\Katrin\Documents\c_sharp\lab_!\WpfApplication3\WpfApplication3\obj\Debug\WpfApplication3.csproj.GenerateResource.Cache
+C:\Users\Katrin\Documents\c_sharp\lab_!\WpfApplication3\WpfApplication3\bin\Debug\Microsoft.ServiceBus.dll
+C:\Users\Katrin\Documents\c_sharp\lab_!\WpfApplication3\WpfApplication3\bin\Debug\ServiceBus.Extensions.PromotedProperties.dll
+C:\Users\Katrin\Documents\c_sharp\lab_!\WpfApplication3\WpfApplication3\obj\Debug\App.baml
+C:\Users\Katrin\Documents\c_sharp\lab_!\WpfApplication3\WpfApplication3\obj\Debug\lang.baml
+C:\Users\Katrin\Documents\c_sharp\lab_!\WpfApplication3\WpfApplication3\obj\Debug\lang.ru-RU.baml
+C:\Users\Katrin\Documents\c_sharp\lab_!\WpfApplication3\WpfApplication3\obj\Debug\icons.baml

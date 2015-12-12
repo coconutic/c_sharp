@@ -1,0 +1,43 @@
+﻿<ResourceDictionary
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:v="clr-namespace:System;assembly=mscorlib">
+    <!-- Main window -->
+    <v:String x:Key="menu">Menu</v:String>
+    <v:String x:Key="save">Save file</v:String>
+    <v:String x:Key="open">Open file</v:String>
+    <v:String x:Key="save_bin">Save binary file</v:String>
+    <v:String x:Key="open_bin">Open binary file</v:String>
+    <v:String x:Key="deflate_bin">Deflate file</v:String>
+    <v:String x:Key="undeflate_file">Undeflate file</v:String>
+    <v:String x:Key="file">File</v:String>
+    <v:String x:Key="rating">Rating</v:String>
+    <v:String x:Key="data1">Data</v:String>
+    <v:String x:Key="grop1">Group</v:String>
+    <v:String x:Key="exit">Exit</v:String>
+    <v:String x:Key="language">Language</v:String>
+    <v:String x:Key="ru_lang">Russian</v:String>
+    <v:String x:Key="en_lang">English</v:String>
+    <v:String x:Key="stud_raiting">Students rating </v:String>
+    <v:String x:Key="display">Show data</v:String>
+    <v:String x:Key="stud_group">Group</v:String>
+    <v:String x:Key="undo1">Reset</v:String>
+    <v:String x:Key="add1">Add student</v:String>
+    <v:String x:Key="delete1">Delete student</v:String>
+    <v:String x:Key="group_by_age">Group by age</v:String>
+    <v:String x:Key="go_away">Deduct</v:String>
+    <v:String x:Key="serial">Serialize</v:String>
+    <v:String x:Key="deserial">Deserialize</v:String>
+    <v:String x:Key="name_surname">Name Surname</v:String>
+    <v:String x:Key="txt_age">Age</v:String>
+    <v:String x:Key="txt_group">Group №</v:String>
+    <v:String x:Key="txt_avr_mark">Average vark</v:String>
+    <v:String x:Key="txt_leader">Leader</v:String>
+    <v:String x:Key="txt_blacklist">Blacklist</v:String>
+    <v:String x:Key="txt_deduct">Quantity of students to deduct </v:String>
+    <v:String x:Key="txt_quan_group">Quantity of groups</v:String>
+    <v:String x:Key="txt_title">Data Base</v:String>
+    <v:String x:Key="txt_1">Click!</v:String>
+    <v:String x:Key="txt_2_lan">Change language</v:String>
+    <v:String x:Key="txt_3">Press Ctrl + D</v:String>
+</ResourceDictionary>

@@ -1,0 +1,43 @@
+﻿<ResourceDictionary 
+                    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+					xmlns:v="clr-namespace:System;assembly=mscorlib">
+    <!-- Main window -->
+    <v:String x:Key="menu">Меню</v:String>
+    <v:String x:Key="save">Сохранить в файл</v:String>
+    <v:String x:Key="open">Открыть файл</v:String>
+    <v:String x:Key="save_bin">Сохранить в бин. файл</v:String>
+    <v:String x:Key="open_bin">Открыть бин. файл</v:String>
+    <v:String x:Key="deflate_bin">Сжать файл</v:String>
+    <v:String x:Key="undeflate_file">Разжать файл</v:String>
+    <v:String x:Key="file">Файл</v:String>
+    <v:String x:Key="rating">Рейтинг</v:String>
+    <v:String x:Key="data1">Данные</v:String>
+    <v:String x:Key="grop1">Группировка</v:String>
+    <v:String x:Key="exit">Выход</v:String>
+    <v:String x:Key="language">Язык</v:String>
+    <v:String x:Key="ru_lang">Русский</v:String>
+    <v:String x:Key="en_lang">Английский</v:String>
+    <v:String x:Key="stud_raiting">Рейтинг студентов</v:String>
+    <v:String x:Key="display">Показать данные студентов</v:String>
+    <v:String x:Key="stud_group">Сгруппировать студентов&#10;по группе</v:String>
+    <v:String x:Key="undo1">Вернуться</v:String>
+    <v:String x:Key="add1">Добавить</v:String>
+    <v:String x:Key="delete1">Удалить</v:String>
+    <v:String x:Key="group_by_age">Группировка по возрасту</v:String>
+    <v:String x:Key="go_away">Отчислить</v:String>
+    <v:String x:Key="serial">Сериализовать</v:String>
+    <v:String x:Key="deserial">Десериализовать</v:String>
+    <v:String x:Key="name_surname">Фамилия Имя Отчество</v:String>
+    <v:String x:Key="txt_age">Возраст</v:String>
+    <v:String x:Key="txt_group">Группа №</v:String>
+    <v:String x:Key="txt_avr_mark">Средний бал</v:String>
+    <v:String x:Key="txt_leader">Лидер</v:String>
+    <v:String x:Key="txt_blacklist">Черный список</v:String>
+    <v:String x:Key="txt_deduct">Количество на отчисление</v:String>
+    <v:String x:Key="txt_quan_group">Количество групп</v:String>
+    <v:String x:Key="txt_title">База Данных</v:String>
+    <v:String x:Key="txt_1">Клик!</v:String>
+    <v:String x:Key="txt_2_lan">Изменить язык</v:String>
+    <v:String x:Key="txt_3">Нажмите Ctrl + D</v:String>
+</ResourceDictionary>

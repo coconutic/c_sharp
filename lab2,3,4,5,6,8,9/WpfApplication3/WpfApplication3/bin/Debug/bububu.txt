@@ -1,0 +1,99 @@
+<ObservableCollection1>
+  <Count>16</Count>
+  <Student>
+    <Name>Курач Екатерина Владиславовна</Name>
+    <Mark>8</Mark>
+    <Group>453504</Group>
+    <Age>18</Age>
+  </Student>
+  <Student>
+    <Name>Лазовская Дарья Вадимовна</Name>
+    <Mark>6</Mark>
+    <Group>543412</Group>
+    <Age>20</Age>
+  </Student>
+  <Student>
+    <Name>Пронькин Максим Игоревич</Name>
+    <Mark>8</Mark>
+    <Group>453502</Group>
+    <Age>18</Age>
+  </Student>
+  <Student>
+    <Name>Езерская Елена Вадимовна</Name>
+    <Mark>9</Mark>
+    <Group>453504</Group>
+    <Age>18</Age>
+  </Student>
+  <Student>
+    <Name>Гончар Владислав Сергеевич</Name>
+    <Mark>2.5</Mark>
+    <Group>392023</Group>
+    <Age>21</Age>
+  </Student>
+  <Student>
+    <Name>Долматович Алина Сергеевна</Name>
+    <Mark>8</Mark>
+    <Group>453504</Group>
+    <Age>18</Age>
+  </Student>
+  <Student>
+    <Name>Кравцов Артем Андреевич</Name>
+    <Mark>5</Mark>
+    <Group>392023</Group>
+    <Age>21</Age>
+  </Student>
+  <Student>
+    <Name>Ващилко Александр Игоревич</Name>
+    <Mark>7</Mark>
+    <Group>543412</Group>
+    <Age>20</Age>
+  </Student>
+  <Student>
+    <Name>Щепнов Дмитрий Вадимович</Name>
+    <Mark>4</Mark>
+    <Group>123456</Group>
+    <Age>22</Age>
+  </Student>
+  <Student>
+    <Name>Каржанец Анастасия Владиславовна</Name>
+    <Mark>5</Mark>
+    <Group>392023</Group>
+    <Age>17</Age>
+  </Student>
+  <Student>
+    <Name>Гончар Владислав Андреевич</Name>
+    <Mark>4</Mark>
+    <Group>392023</Group>
+    <Age>18</Age>
+  </Student>
+  <Student>
+    <Name>Толкач Сергей Игоревич</Name>
+    <Mark>6</Mark>
+    <Group>392023</Group>
+    <Age>17</Age>
+  </Student>
+  <Student>
+    <Name>Сакович Александр Михайлович</Name>
+    <Mark>8</Mark>
+    <Group>123456</Group>
+    <Age>22</Age>
+  </Student>
+  <Student>
+    <Name>Буза Иван Андреевич</Name>
+    <Mark>9</Mark>
+    <Group>453504</Group>
+    <Age>18</Age>
+  </Student>
+  <Student>
+    <Name>Царюк Татьяна Игоревна</Name>
+    <Mark>10</Mark>
+    <Group>123456</Group>
+    <Age>22</Age>
+  </Student>
+  <Student>
+    <Name>Кравцова Эля Марковна</Name>
+    <Mark>2.5</Mark>
+    <Group>392023</Group>
+    <Age>21</Age>
+  </Student>
+</ObservableCollection1>

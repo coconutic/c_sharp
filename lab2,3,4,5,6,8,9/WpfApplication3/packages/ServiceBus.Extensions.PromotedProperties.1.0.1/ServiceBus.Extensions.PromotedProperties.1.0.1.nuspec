@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>ServiceBus.Extensions.PromotedProperties</id>
+    <version>1.0.1</version>
+    <title />
+    <authors>zuahmed</authors>
+    <owners>zuahmed</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>This package is for use with Service Bus WCF programing model. The extensions enables you to mark parts of your data model [DataContract] as promoted properties. These marked properties are then automatically lifted and promoted in the outgoing BrokeredMessage. 
+
+Sample usage:
+==========
+public class Order
+{
+    public double Amount { get; set; }
+    [PromotedProperty]
+    public string ShipCity { get; set; }
+}
+
+[ServiceContract]
+public interface IOrderService
+{
+    [OperationContract(Name = "SubmitFlat", IsOneWay = true)]
+    [PropertyPromotionBehavior]
+    void Submit(double amount, [PromotedProperty] string shipCity);
+
+    [OperationContract(IsOneWay = true)]
+    [PropertyPromotionBehavior]
+    void Submit(Order order);
+}
+
+See following blog post for implementation details. 
+
+http://zamd.net/2011/05/25/pubsub-with-wcf-part-2/</description>
+    <tags>ServiceBus Service Bus OnPremise Beta Server WCF Promoted Properties</tags>
+    <dependencies>
+      <dependency id="ServiceBus.v1_0" version="0.0.5.0" />
+    </dependencies>
+  </metadata>
+</package>

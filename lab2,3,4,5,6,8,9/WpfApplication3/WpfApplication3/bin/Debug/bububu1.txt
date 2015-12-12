@@ -1,0 +1,9 @@
+<ObservableCollection`1>
+<Count>1</Count>
+<Student>
+	<Name></Student></Name>
+	<Mark>1</Mark>
+	<Group>1</Group>
+	<Age>1</Age>
+</Student>
+</ObservableCollection`1>
