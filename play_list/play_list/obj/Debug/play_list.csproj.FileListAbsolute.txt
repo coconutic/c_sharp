@@ -1,0 +1,13 @@
+c:\users\katrin\documents\visual studio 2013\Projects\play_list\play_list\bin\Debug\play_list.exe.config
+c:\users\katrin\documents\visual studio 2013\Projects\play_list\play_list\obj\Debug\play_list.csprojResolveAssemblyReference.cache
+c:\users\katrin\documents\visual studio 2013\Projects\play_list\play_list\obj\Debug\MainWindow.baml
+c:\users\katrin\documents\visual studio 2013\Projects\play_list\play_list\obj\Debug\MainWindow.g.cs
+c:\users\katrin\documents\visual studio 2013\Projects\play_list\play_list\obj\Debug\App.g.cs
+c:\users\katrin\documents\visual studio 2013\Projects\play_list\play_list\obj\Debug\play_list_MarkupCompile.cache
+c:\users\katrin\documents\visual studio 2013\Projects\play_list\play_list\obj\Debug\play_list.g.resources
+c:\users\katrin\documents\visual studio 2013\Projects\play_list\play_list\obj\Debug\play_list.Properties.Resources.resources
+c:\users\katrin\documents\visual studio 2013\Projects\play_list\play_list\obj\Debug\play_list.csproj.GenerateResource.Cache
+c:\users\katrin\documents\visual studio 2013\Projects\play_list\play_list\bin\Debug\play_list.exe
+c:\users\katrin\documents\visual studio 2013\Projects\play_list\play_list\bin\Debug\play_list.pdb
+c:\users\katrin\documents\visual studio 2013\Projects\play_list\play_list\obj\Debug\play_list.exe
+c:\users\katrin\documents\visual studio 2013\Projects\play_list\play_list\obj\Debug\play_list.pdb

@@ -1,0 +1,107 @@
+﻿<Window x:Class="play_list.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="450" Width="650">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="43" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <ToolBar Grid.Row="0">
+            <Button Width="75"
+                    Height="22"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center"
+                    Click="add_click"
+                    Focusable="False">
+                <Image Source="C:\Users\Katrin\Documents\Visual Studio 2013\Projects\play_list\play_list\add.ico"/>
+            </Button>
+        </ToolBar>
+        <TabControl x:Name="Tabs" SelectedItem="{Binding MySelectedItem, Mode=TwoWay}" Margin="9,10,11,9" Grid.Row="1" >
+            <TabControl.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Name}"/>
+                </DataTemplate>
+            </TabControl.ItemTemplate>
+            <TabControl.ContentTemplate >
+                <DataTemplate>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Row="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="230"/>
+                                <ColumnDefinition Width="300"/>
+                                <ColumnDefinition Width="100"/>
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Grid.Column = "0" Orientation="Horizontal">
+                                <Button Margin="2" Content="Add" Width="40" Height="20" Background="Orange" Click="adds_click"/>
+                                <Button Margin="2" Content="Delete" Width="40" Height="20" Background="MediumSpringGreen" Click="delete_click"/>
+                                <Button Margin="2" Content="Play" Width="40" Height="20" Background="LightSalmon" Click="play_click"/>
+                                <Button Margin="2" Content="Pause" Width="40" Height="20" Background="Silver" Click="pause_click"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column = "1" Orientation="Vertical" HorizontalAlignment="Left">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock FontSize="10">
+                                        <Run Text="ID = "/>
+                                        <Run Text="{Binding ID, Mode=OneWay}"/>
+                                    </TextBlock>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock FontSize="10">
+                                        <Run Text="Name = "/>
+                                        <Run Text="{Binding Name, Mode=OneWay}"/>
+                                    </TextBlock>
+                                </StackPanel>
+                            </StackPanel>
+                            <StackPanel Grid.Column = "2" Orientation="Vertical" HorizontalAlignment="Left" >
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock FontSize="10">
+                                        <Run Text="Duration = "/>
+                                        <Run Text="{Binding Duration, Mode=OneWay}"/>
+                                    </TextBlock>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock FontSize="10">
+                                        <Run Text="Reiting = "/>
+                                        <Run Text="{Binding Reiting, Mode=OneWay}"/>
+                                    </TextBlock>
+                                </StackPanel>
+                            </StackPanel>
+                        </Grid>
+                        <ListView x:Name="mlist" SelectedIndex="{Binding Path=SelectedIndex, Mode=TwoWay}"
+                                   ItemsSource="{Binding Path=Songs}" Margin="0,0,0,30" Grid.Row = "1" >
+                            <ListView.View>
+                                <GridView>
+                                    <GridViewColumn Width="50"
+                                                DisplayMemberBinding="{Binding Path=ID1}"
+                                                Header="ID" />
+                                    <GridViewColumn Width="180"
+                                                DisplayMemberBinding="{Binding Path=Name1}"
+                                                Header="Название" />
+                                    <GridViewColumn Width="1"
+                                                Header="" />
+                                    <GridViewColumn Width="150"
+                                                DisplayMemberBinding="{Binding Path=Singer1}"
+                                                Header="Исполнитель" />
+                                    <GridViewColumn Width="130"
+                                                DisplayMemberBinding="{Binding Path=Duration1}" 
+                                               Header="Длина" />
+                                    <GridViewColumn Width="50"
+                                                DisplayMemberBinding="{Binding Path=Reiting1}"
+                                                Header="Рейтинг" />
+                                </GridView>
+                            </ListView.View>
+                        </ListView>
+                        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+                            <Button Margin="2" Content="Save" Width="40" Height="20"  Background="Fuchsia" Click="save_click"/>
+                            <Button Margin="2" Content="Close" Width="40" Height="20" Background="RoyalBlue" Click="close_click"/>
+                        </StackPanel>
+                    </Grid>
+                </DataTemplate>
+            </TabControl.ContentTemplate>
+        </TabControl>
+    </Grid>
+</Window>
